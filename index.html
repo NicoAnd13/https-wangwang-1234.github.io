@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>你的关系型贵人运 · 16题关系测试</title>
+<meta name="description" content="用约 3 分钟，看看你容易在哪种关系里遇到拉你一把的人。16 题，结果含贵人运指数、五维分数、人格标签与行动建议。">
+<meta name="theme-color" content="#FAF7F0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FAF7F0'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%231F5C4A' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23C9A45C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#FAF7F0;
+  --paper-2:#FDFBF6;
+  --ink:#1F2A24;
+  --muted:#6B746E;
+  --faint:#9AA29C;
+  --line:#E6E0D4;
+  --green:#1F5C4A;
+  --green-soft:rgba(31,92,74,.07);
+  --gold:#C9A45C;
+  --gold-soft:rgba(201,164,92,.14);
+  --serif:"Noto Serif SC","Songti SC","STSong",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+  --r-card:16px;
+  --r-opt:12px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3,p,ul,ol{margin:0}
+ul,ol{padding:0}
+
+.wrap{max-width:520px;margin:0 auto;padding:0 20px}
+.hair{height:1px;background:var(--line);margin:0}
+
+/* ============ 顶部 ============ */
+.topbar{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--line)}
+.topbar-in{height:52px;display:flex;align-items:center;justify-content:space-between;max-width:520px;margin:0 auto;padding:0 20px}
+.brand{display:inline-flex;align-items:center;gap:8px}
+.brand svg{width:18px;height:18px;flex:0 0 auto}
+.brand span{font-family:var(--serif);font-size:15px;letter-spacing:.06em;color:var(--ink)}
+.topbar .ghost-link{font-size:13px;color:var(--muted);min-height:44px;display:inline-flex;align-items:center}
+.topbar .ghost-link:hover{color:var(--green)}
+
+/* ============ 封面 ============ */
+.cover{padding:22px 0 40px}
+.cover-art{height:210px;border-radius:var(--r-card);overflow:hidden;position:relative;background:#EDE7DB}
+.cover-art img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.cover-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,247,240,.10),rgba(250,247,240,.55))}
+.cover-body{padding:26px 0 0}
+.kicker{font-size:13px;color:var(--gold);letter-spacing:.1em;margin:0 0 12px}
+h1.cover-title{
+  font-family:var(--serif);font-weight:600;font-size:clamp(26px,7.6vw,33px);
+  line-height:1.38;letter-spacing:.01em;
+}
+.cover-sub{margin:14px 0 0;font-size:14px;color:var(--muted)}
+.cover-sub b{color:var(--ink);font-weight:500}
+.points{margin:22px 0 0;list-style:none;display:grid;gap:10px}
+.points li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);line-height:1.6}
+.points li .ic{flex:0 0 auto;width:14px;height:14px;margin-top:3px;color:var(--green)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:52px;padding:0 24px;border-radius:var(--r-opt);
+  font-size:16px;letter-spacing:.02em;
+  transition:background .18s ease,border-color .18s ease,color .18s ease,opacity .18s ease;
+}
+.btn-primary{background:var(--green);color:#fff;width:100%}
+.btn-primary:hover{background:#184a3b}
+.btn-primary:disabled{background:#B7C4BE;color:#F2F5F3;cursor:not-allowed}
+.btn-ghost{border:1px solid var(--line);background:var(--paper-2);color:var(--ink)}
+.btn-ghost:hover{border-color:#CFC7B8}
+.cover-cta{margin:26px 0 0}
+.resume-tip{margin:12px 0 0;font-size:13px;color:var(--muted);text-align:center}
+.resume-tip button{color:var(--green);text-decoration:underline;text-underline-offset:3px;font-size:13px;min-height:44px}
+.cover-foot{margin:18px 0 0;font-size:12px;color:var(--faint);text-align:center;line-height:1.7}
+
+/* ============ 答题 ============ */
+.quiz{padding:14px 0 0;min-height:calc(100dvh - 53px);display:flex;flex-direction:column}
+.quiz-head{display:flex;align-items:center;justify-content:space-between}
+.icon-btn{min-width:44px;min-height:44px;display:inline-flex;align-items:center;gap:4px;font-size:13px;color:var(--muted);padding:0 4px;margin-left:-4px}
+.icon-btn:hover{color:var(--green)}
+.icon-btn:disabled{opacity:.4;cursor:default}
+.qcount{font-size:13px;color:var(--faint);font-variant-numeric:tabular-nums}
+.qcount b{color:var(--ink);font-weight:500;font-size:14px}
+.pbar{height:3px;background:var(--line);border-radius:2px;margin-top:10px;overflow:hidden}
+.pbar .fill{height:100%;width:0;background:var(--green);border-radius:2px;transition:width .3s cubic-bezier(.4,0,.2,1)}
+.qbody{flex:1;padding:26px 0 18px;display:flex;flex-direction:column;justify-content:center}
+.qstem{font-size:17px;font-weight:500;line-height:1.7;letter-spacing:.01em}
+.qnote{margin:8px 0 0;font-size:12px;color:var(--faint)}
+.opts{margin:22px 0 0;display:grid;gap:10px}
+.opts.drop{margin-top:6px}
+
+/* 李克特纵向整行 */
+.opt{
+  position:relative;display:flex;align-items:center;gap:12px;
+  width:100%;min-height:50px;padding:12px 16px;text-align:left;
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-opt);
+  font-size:15px;line-height:1.5;color:var(--ink);
+  transition:border-color .16s ease,background .16s ease;
+}
+.opt .mark{
+  flex:0 0 auto;width:18px;height:18px;border-radius:50%;
+  border:1px solid #CFC7B8;display:inline-flex;align-items:center;justify-content:center;
+  transition:border-color .16s ease,background .16s ease;
+}
+.opt .mark svg{width:10px;height:10px;opacity:0;transition:opacity .16s ease;color:#fff}
+.opt:hover{border-color:#C8BFAD}
+.opt.sel{border:1.5px solid var(--green);background:var(--green-soft)}
+.opt.sel .mark{border-color:var(--green);background:var(--green)}
+.opt.sel .mark svg{opacity:1}
+.opt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* 情境题卡片 */
+.scard{
+  position:relative;display:flex;align-items:flex-start;gap:12px;
+  width:100%;min-height:64px;padding:14px 16px;text-align:left;
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-opt);
+  font-size:15px;line-height:1.55;color:var(--ink);
+  transition:border-color .16s ease,background .16s ease;
+}
+.scard .letter{
+  flex:0 0 auto;width:22px;height:22px;border-radius:50%;
+  font-family:var(--serif);font-size:12px;line-height:22px;text-align:center;
+  color:var(--green);background:var(--gold-soft);
+}
+.scard .txt{min-width:0}
+.scard .ok{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--green);opacity:0;transition:opacity .16s ease}
+.scard:hover{border-color:#C8BFAD}
+.scard.sel{border:1.5px solid var(--green);background:var(--green-soft)}
+.scard.sel .letter{background:var(--green);color:#fff}
+.scard.sel .ok{opacity:1}
+.scard:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.qfoot{
+  position:sticky;bottom:0;background:var(--paper);
+  padding:14px 0 calc(16px + env(safe-area-inset-bottom));
+  border-top:1px solid var(--line);margin-top:auto;
+}
+.qfoot-in{display:flex;gap:10px}
+.qfoot-in .btn{min-height:50px;font-size:15px}
+.qfoot-in .btn-ghost{flex:0 0 96px}
+.qfoot-in .btn-primary{flex:1}
+.qfoot .hintline{margin:10px 0 0;font-size:12px;color:var(--faint);text-align:center}
+
+/* ============ 计算过渡 ============ */
+.calc{
+  min-height:calc(100dvh - 53px);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:22px;padding:60px 0;
+}
+.calc-ring{width:64px;height:64px;border-radius:50%;border:1px solid var(--line);position:relative;overflow:hidden}
+.calc-ring::after{
+  content:"";position:absolute;inset:-1px;border-radius:50%;
+  background:conic-gradient(from 0deg,var(--green),var(--gold),var(--green));
+  animation:spin 1.6s linear infinite;
+  mask:radial-gradient(circle,transparent 62%,#000 63%);
+  -webkit-mask:radial-gradient(circle,transparent 62%,#000 63%);
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.calc-text{font-family:var(--serif);font-size:17px;color:var(--ink);letter-spacing:.04em}
+.calc-sub{font-size:13px;color:var(--faint)}
+
+/* ============ 结果 ============ */
+.result{padding:26px 0 10px}
+.about{padding:26px 0 10px}
+.res-kicker{font-size:12px;color:var(--faint);letter-spacing:.14em}
+.idx{display:flex;align-items:baseline;gap:8px;margin:6px 0 0}
+.idx b{font-family:var(--serif);font-size:64px;font-weight:600;line-height:1.05;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.idx span{font-size:14px;color:var(--faint)}
+.stage{margin:6px 0 0;font-size:15px;color:var(--muted)}
+.tag{
+  display:inline-flex;align-items:center;gap:7px;margin:14px 0 0;
+  padding:8px 14px;border-radius:999px;background:var(--gold-soft);
+  font-family:var(--serif);font-size:15px;color:#8A6B2E;letter-spacing:.02em;
+}
+.tag svg{width:13px;height:13px}
+.oneliner{
+  margin:18px 0 0;padding:16px 0 0;border-top:1px solid var(--line);
+  font-family:var(--serif);font-size:19px;line-height:1.65;letter-spacing:.01em;
+}
+.stage-note{margin:8px 0 0;font-size:13.5px;color:var(--muted);line-height:1.75}
+
+.block{padding:30px 0 0}
+.block-h{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 6px}
+.block-h h2{font-family:var(--serif);font-size:17px;font-weight:500;letter-spacing:.02em}
+.block-h .aside{font-size:12px;color:var(--faint)}
+
+.dims{margin:16px 0 0;display:grid;gap:14px}
+.dim{display:grid;grid-template-columns:4.4em 1fr 2.4em;align-items:center;gap:10px}
+.dim .lab{font-size:13px;color:var(--muted);white-space:nowrap}
+.dim .track{height:6px;border-radius:3px;background:#EDE7DB;overflow:hidden;min-width:0}
+.dim .fill{height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,#6F8A7B,#C9A45C);transition:width .75s cubic-bezier(.22,.61,.36,1)}
+.dim .num{font-size:13px;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+
+.subs{margin:16px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.sub{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-opt);padding:12px 12px 13px}
+.sub .n{font-size:12px;color:var(--muted)}
+.sub .v{font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.3;margin-top:2px;font-variant-numeric:tabular-nums}
+.sub .bar{height:3px;border-radius:2px;background:#EDE7DB;margin-top:8px;overflow:hidden}
+.sub .bar i{display:block;height:100%;width:0;background:var(--gold);border-radius:2px;transition:width .75s ease}
+
+.reading{margin:14px 0 0;font-size:15.5px;line-height:1.85;color:#333C36}
+.reading p + p{margin-top:12px}
+.reading .lead{color:var(--ink)}
+.tips{margin:14px 0 0;list-style:none;display:grid;gap:12px}
+.tips li{display:flex;gap:10px;font-size:15px;line-height:1.65}
+.tips li i{
+  flex:0 0 auto;width:18px;height:18px;margin-top:2px;border-radius:50%;
+  background:var(--green-soft);color:var(--green);
+  display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:11px;
+}
+
+.quote{
+  margin:34px 0 0;padding:26px 20px;border-radius:var(--r-card);
+  background:var(--paper-2);border:1px solid var(--line);text-align:center;
+}
+.quote p{font-family:var(--serif);font-size:19px;line-height:1.7;letter-spacing:.02em}
+.quote .qmark{color:var(--gold);font-family:var(--serif);font-size:13px;letter-spacing:.16em;display:block;margin-bottom:10px}
+
+.actions{margin:22px 0 0;display:grid;gap:10px}
+.actions .btn{width:100%}
+.confirm-bar{
+  margin:10px 0 0;display:none;gap:10px;
+  padding:12px;border-radius:var(--r-opt);background:var(--gold-soft);
+  font-size:14px;line-height:1.6;color:#7A5F28;align-items:center;flex-wrap:wrap;
+}
+.confirm-bar.on{display:flex}
+.confirm-bar .msg{flex:1;min-width:140px}
+.confirm-bar button{font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid #DCC79C;background:var(--paper-2);color:#7A5F28}
+.confirm-bar button:hover{background:#fff}
+
+details.score-note{margin:26px 0 0;border-top:1px solid var(--line);padding-top:14px}
+details.score-note summary{
+  font-size:13px;color:var(--muted);cursor:pointer;list-style:none;
+  display:flex;align-items:center;justify-content:space-between;min-height:44px;
+}
+details.score-note summary::-webkit-details-marker{display:none}
+details.score-note summary::after{content:"+";font-size:16px;color:var(--faint)}
+details[open].score-note summary::after{content:"−"}
+.note-body{font-size:13px;color:var(--muted);line-height:1.85;padding:2px 0 0}
+.note-body p + p{margin-top:10px}
+.note-body .ref{margin-top:14px;display:grid;gap:8px;color:var(--faint);font-size:12px}
+.note-body .ref cite{display:block;line-height:1.7}
+
+.disclaimer{margin:24px 0 0;padding:0 0 34px;font-size:12px;color:var(--faint);line-height:1.8;text-align:center}
+
+/* ============ 分享卡片 ============ */
+.cardpage{
+  position:fixed;inset:0;z-index:60;background:rgba(28,32,29,.42);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  display:flex;flex-direction:column;overflow-y:auto;
+}
+.cardpage-in{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px 0;gap:16px}
+.card-holder{width:100%;max-width:330px;border-radius:6px;overflow:hidden;box-shadow:0 12px 34px rgba(15,25,20,.24);background:#fff}
+.card-holder canvas{width:100%;height:auto;display:block}
+.card-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(250,247,240,.85);font-size:13px;color:var(--muted)}
+.card-btns{
+  width:100%;max-width:330px;display:grid;gap:9px;padding:0 0 8px;
+}
+.card-btns .btn{min-height:48px;font-size:14px}
+.card-btns .btn-primary{background:#FDFBF6;color:var(--ink);border:1px solid rgba(253,251,246,.6)}
+.card-btns .btn-primary:hover{background:#fff}
+.card-btns .row2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.card-btns .btn-ghost{border:1px solid rgba(253,251,246,.45);background:transparent;color:#F5F1E8}
+.card-btns .btn-ghost:hover{border-color:#fff;color:#fff}
+.card-hint{padding:0 0 calc(22px + env(safe-area-inset-bottom));font-size:12px;color:rgba(250,247,240,.75);text-align:center}
+
+/* ============ Debug ============ */
+.debug{margin:26px 0 0;padding:16px;border:1px dashed #C9B896;border-radius:12px;background:#FBF6E9}
+.debug h3{font-size:13px;color:#7A5F28;margin:0 0 10px;letter-spacing:.04em}
+.debug pre{font-size:12px;line-height:1.7;color:#4A4032;white-space:pre-wrap;word-break:break-all;margin:0;font-family:ui-monospace,Menlo,Consolas,monospace}
+.debug .row{display:flex;gap:8px;margin-top:12px}
+.debug button{font-size:12px;padding:7px 12px;border:1px solid #DCC79C;border-radius:8px;background:#fff;color:#7A5F28}
+
+/* ============ 通用 ============ */
+.view{animation:fadeUp .34s cubic-bezier(.22,.61,.36,1) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.toast{
+  position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom));transform:translate(-50%,10px);
+  background:#1F2A24;color:#F5F1E8;font-size:14px;line-height:1.5;
+  padding:11px 16px;border-radius:10px;max-width:78vw;text-align:center;
+  opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;z-index:90;
+}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+@media (prefers-reduced-motion:reduce){
+  .view,.calc-ring::after{animation:none}
+  .pbar .fill,.dim .fill,.sub .bar i,.toast,.opt,.scard{transition:none}
+}
+@media (min-width:768px){
+  .wrap{max-width:560px}
+  .topbar-in{max-width:560px}
+  .cover-art{height:230px}
+  h1.cover-title{font-size:36px}
+  .cover{padding-top:30px}
+  .qbody{padding-top:40px}
+  .idx b{font-size:72px}
+  .subs{gap:12px}
+}
+</style>
+</head>
+<body>
+<!-- ===== 顶栏 ===== -->
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#/cover" aria-label="回到封面">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1F5C4A" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="2.2" fill="#C9A45C" stroke="none"/></svg>
+      <span>关系型贵人运</span>
+    </a>
+    <a class="ghost-link" href="#/about">关于测试</a>
+  </div>
+</header>
+
+<main id="app" class="wrap" aria-live="polite"></main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =============================================================
+   1. 内容配置（题目 / 标签 / 阶段 / 文献）
+   所有文案集中在此，便于后续调整阈值与措辞。
+   ============================================================= */
+const LIKERT = [
+  { v:1, t:"非常不符合" },
+  { v:2, t:"不太符合" },
+  { v:3, t:"说不清" },
+  { v:4, t:"比较符合" },
+  { v:5, t:"非常符合" }
+];
+
+const QUESTIONS = [
+  { id:"Q1",  layer:"affinity",  type:"likert",   dim:"A", stem:"我愿意先理解别人的难处，即使对方和我想法不同。" },
+  { id:"Q2",  layer:"affinity",  type:"likert",   dim:"A", stem:"别人跟我相处时，通常觉得放松，不用太防备。" },
+  { id:"Q3",  layer:"initiative",type:"likert",   dim:"B", stem:"到了新环境，我常会主动开口，先认识几个人。" },
+  { id:"Q4",  layer:"initiative",type:"likert",   dim:"B", stem:"需要帮忙时，我能比较自然地向不太熟的人开口。" },
+  { id:"Q5",  layer:"stability", type:"likert",   dim:"C", reverse:true,
+    stem:"被拒绝或已读不回时，我容易反复想，很久缓不过来。" },
+  { id:"Q6",  layer:"stability", type:"likert",   dim:"C", stem:"关系里有不确定时，我通常能稳住自己，不急着下结论。" },
+
+  { id:"Q7",  layer:"communal",  type:"scenario", dim:"D",
+    stem:"同事临时缺人手，你也很忙，对方还没开口。你的第一反应更接近？",
+    opts:[
+      { k:"A", t:"先装没看见，免得被麻烦" },
+      { k:"B", t:"等对方明确求助再说" },
+      { k:"C", t:"先问一句「需要搭把手吗」" },
+      { k:"D", t:"放下一点自己的事去帮" }
+    ]},
+  { id:"Q8",  layer:"communal",  type:"scenario", dim:"D",
+    stem:"朋友最近压力大，找你吐槽，你手头也忙。你会？",
+    opts:[
+      { k:"A", t:"找借口结束对话" },
+      { k:"B", t:"听完但少回应" },
+      { k:"C", t:"先听一会儿，问 ta 最需要什么" },
+      { k:"D", t:"放下手头事陪 ta 理清" }
+    ]},
+  { id:"Q9",  layer:"communal",  type:"scenario", dim:"D",
+    stem:"你帮过的人后来没回报你，你会？",
+    opts:[
+      { k:"A", t:"下次不再帮" },
+      { k:"B", t:"有点不舒服，但不说" },
+      { k:"C", t:"提醒对方该回报" },
+      { k:"D", t:"算了，帮的时候没想回报" }
+    ]},
+  { id:"Q10", layer:"communal",  type:"scenario", dim:"D",
+    stem:"别人给你介绍资源，你最先想到？",
+    opts:[
+      { k:"A", t:"欠人情要尽快还" },
+      { k:"B", t:"对方是不是有所图" },
+      { k:"C", t:"先看资源是否合适" },
+      { k:"D", t:"先接住，再自然找机会回馈" }
+    ]},
+  { id:"Q11", layer:"communal",  type:"scenario", dim:"D",
+    stem:"新认识的人对你很热情，你的默认反应？",
+    opts:[
+      { k:"A", t:"先观察对方图什么" },
+      { k:"B", t:"保持距离，不欠人情" },
+      { k:"C", t:"接受好意，找机会回馈" },
+      { k:"D", t:"自然相处，不急着算" }
+    ]},
+
+  { id:"Q12", layer:"support",   type:"likert",   dim:"E", sub:"family",
+    stem:"遇到重要选择时，家里有人能给我实在的建议或托底。" },
+  { id:"Q13", layer:"support",   type:"likert",   dim:"E", sub:"friend",
+    stem:"我有一两个朋友，在我开口前就能察觉我需要帮助。" },
+  { id:"Q14", layer:"support",   type:"likert",   dim:"E", sub:"friend",
+    stem:"当我需要引荐或信息时，我知道该找哪个朋友问。" },
+  { id:"Q15", layer:"support",   type:"likert",   dim:"E", sub:"so",
+    stem:"我生命里有一位导师、前辈或领导，愿意在关键处给我机会。" },
+  { id:"Q16", layer:"support",   type:"likert",   dim:"E", sub:"so",
+    stem:"即使和对方不常联系，我也相信关键时刻 ta 愿意帮我。" }
+];
+
+const DIMS = [
+  { key:"A", name:"亲和力",   weight:.20 },
+  { key:"B", name:"主动连接", weight:.20 },
+  { key:"C", name:"情绪稳定", weight:.15 },
+  { key:"D", name:"公共取向", weight:.25 },
+  { key:"E", name:"支持感知", weight:.20 }
+];
+
+const SUBS = [
+  { key:"family", name:"家庭支持" },
+  { key:"friend", name:"朋友支持" },
+  { key:"so",     name:"重要他人" }
+];
+
+const STAGES = [
+  { max:39,  name:"关系通路 · 萌芽期",
+    note:"你当前更习惯自己扛，支持的入口还在形成。先让一两个信任的人知道你的具体需要，通路就会开始打开。" },
+  { max:54,  name:"关系通路 · 生长期",
+    note:"你已经有一些支持的基础，适合把模糊的期待说成具体请求，让机会更容易找到你。" },
+  { max:69,  name:"关系通路 · 稳定期",
+    note:"你在某些关系类型里已经有稳定的贵人运。换一种表达方式或换一个圈层，通路会明显变宽。" },
+  { max:84,  name:"关系通路 · 通畅期",
+    note:"你已有较稳定的支持通路。接下来重点是维护深度、把需求说具体，并留好自己的边界。" },
+  { max:100, name:"关系通路 · 协同期",
+    note:"性格引力、关系取向与支持感知正在形成合力。你容易让人愿意帮，也接得住机会，注意筛选与边界即可。" }
+];
+
+const TAGS = {
+  warm: {
+    name:"暖光型贵人磁铁",
+    one:"你不是运气好，你是让人愿意帮你。",
+    read:[
+      "你身上有一种让人放松的质地：愿意先理解别人的难处，也敢在需要时开口。这让你不必刻意经营，支持就会自然流向你——别人帮你，往往不是因为欠你什么，而是因为和你相处不费力。",
+      "你可以多走的一步，是别把「理解别人」变成默认动作。帮人之前先问自己想不想给；需求提出来时说得再具体一点——什么时候、要什么、到什么程度。",
+      "你的贵人运不靠广泛社交，而靠「相处舒服 + 需求清楚 + 不急着结算」。守住这三件事，你不必变成另一个人，机会也会持续找到你。"
+    ],
+    tips:["把需求说具体：要什么、什么时候、到什么程度","维护三五个弱连接，别只在需要时才出现","帮人之前先问自己：我愿意给吗"],
+    quote:"我不是运气好，我是让人愿意帮我。",
+    card:"先给出理解，机会才敢靠近。"
+  },
+  deep: {
+    name:"深根型信任贵人",
+    one:"你不追机会，你让信任替你开门。",
+    read:[
+      "你慢热但可靠，关系一旦建立就不容易散。你的贵人运长在深处，不长在热闹处——那些认识你很久的人，愿意在关键处为你说话，哪怕平时联系不多。",
+      "你可以多走的一步，是别总等一个「合适的时机」再开口。时机很少自己出现。试着每个月向一位信任的人说清一件具体的需要：不是抱怨，也不是诉苦，而是「我在找什么」。",
+      "不必逼自己变成社交达人。只要让信任你的人知道你在找什么，机会就会从深度关系里长出来——这正是你最擅长的那种关系。"
+    ],
+    tips:["每月向一位信任的人说清一件具体需要","让老朋友知道你在找什么，而不是等他们猜","别等完美时机，先迈出一小步"],
+    quote:"我不追机会，我让信任替我开门。",
+    card:"关系越久，越有人愿意托底。"
+  },
+  radar: {
+    name:"广角型机会雷达",
+    one:"你的机会很多，接下来要让它们留下来。",
+    read:[
+      "你认识人多、对机会敏感，也愿意先迈出第一步。这种广度是很稀缺的能力——很多人的贵人一辈子只遇到一两个，而你能遇到的，是一整片网络。",
+      "你可以多走的一步，是给关系一点沉淀的时间。少一点急着结算，先递出价值；被拒绝之后，练习让自己在一天之内翻篇，而不是反复回放。",
+      "从这份广度里挑出三个愿意长期来往的人，把泛泛的认识变成能彼此托付的关系。你的贵人运不缺入口，缺的是留下来的那一层。"
+    ],
+    tips:["被拒绝后给自己 24 小时，别反复回放","先递出价值，不急着结算人情","从名单里挑三个人，认真经营"],
+    quote:"我认识很多人，但我要让关系留下来。",
+    card:"机会很多，深度才是放大器。"
+  },
+  slow: {
+    name:"慢热型长期贵人",
+    one:"你值得被支持，只是还没开口。",
+    read:[
+      "你愿意先付出，也不太计较回报。你身边的人其实知道你的好，只是很少有机会知道你需要什么——因为你习惯把需要收起来，先照顾别人。",
+      "你可以多走的一步，是把「我自己能行」偶尔换成「这件事你能帮我看看吗」。开口不是示弱，而是给别人一个靠近你的机会。",
+      "你值得被接住，而且你身边本来就有可以接住你的人。先允许自己被帮助一次，你会发现关系不但没有变轻，反而更真实了。"
+    ],
+    tips:["主动报备需求，别等对方察觉","接受小帮助，说「谢谢，我先记下」","记下三次「被接住」的经历，提醒自己可以开口"],
+    quote:"我可以先付出，也可以允许自己被接住。",
+    card:"不是没人帮，是我还没开口。"
+  },
+  clear: {
+    name:"清醒独立型",
+    one:"你可以独立，也可以被接住。",
+    read:[
+      "你习惯自己扛，不太轻易欠人情。这让你可靠、有分寸，也让别人放心把重要的事交给你——你的独立性本身就是一种信用。",
+      "你可以多走的一步，是练习接受低风险的小帮助：一句建议、一次顺手引荐。说「谢谢，我先记下」，比急着还清更让人舒服，也更留得住关系。",
+      "独立不是不求助，是不把求助当欠债。当你能坦然接住小忙，大机会才有进来的缝隙——你不需要改变自己，只需要多开一扇小门。"
+    ],
+    tips:["把「小忙」和「大恩」分开看，小忙可以坦然接受","练习说「谢谢，我先记下」","每季度允许自己麻烦一个人一次"],
+    quote:"独立不是不求助，是不把求助当欠债。",
+    card:"我可以独立，也可以被接住。"
+  },
+  steady: {
+    name:"稳健型关系经营者",
+    one:"你的关系慢一点，但很稳。",
+    read:[
+      "你不极端，靠稳定和可信积累关系。你的贵人运是慢变量——不是某一次惊艳的相遇，而是很多次「这个人靠谱」的叠加。",
+      "你可以多走的一步，是主动选一到两个圈层深耕，每季度维护一次；机会来时别只说「都可以」，把想要的说清楚。",
+      "你不需要突然变得外向。把靠谱变成可被看见的东西——及时反馈结果、记得回应、偶尔主动——关系会在时间里替你说话。"
+    ],
+    tips:["选一到两个圈层，每季度维护一次","机会来时明确表达：「我想要这个」","把靠谱变成可被看见的：及时反馈结果"],
+    quote:"贵人运不是爆发，是长期可信任。",
+    card:"我的关系，慢一点但很稳。"
+  }
+};
+
+const REFERENCES = [
+  { t:"Barańczuk, U. (2019). The Five Factor Model of personality and social support: A meta-analysis. Journal of Research in Personality, 81, 38–46.", doi:"10.1016/j.jrp.2019.05.002" },
+  { t:"Clark, M. S., Ouellette, R., Powell, M. C., & Milberg, S. (1987). Recipient’s mood, relationship type, and helping. Journal of Personality and Social Psychology, 53(1), 94–103.", doi:"10.1037/0022-3514.53.1.94" },
+  { t:"Zimet, G. D., Dahlem, N. W., Zimet, S. G., & Farley, G. K. (1988). The Multidimensional Scale of Perceived Social Support. Journal of Personality Assessment, 52(1), 30–41.", doi:"10.1207/s15327752jpa5201_2" }
+];
+/* =============================================================
+   2. 状态 / 存储 / 工具
+   ============================================================= */
+const APP = document.getElementById('app');
+const TOAST = document.getElementById('toast');
+const K_ANS = 'guiren_test_v1_answers';
+const K_PRG = 'guiren_test_v1_progress';
+const DEBUG = new URLSearchParams(location.search).get('debug') === '1';
+
+const Q_BY_ID = {};
+QUESTIONS.forEach(q => { Q_BY_ID[q.id] = q; });
+
+let state = { answers:{}, cursor:0 };
+let lastResult = null;
+let submitting = false;
+
+function track(evt, data){
+  const e = { t:new Date().toISOString(), evt, data:data || null };
+  try{
+    const log = JSON.parse(sessionStorage.getItem('guiren_test_v1_events') || '[]');
+    log.push(e);
+    sessionStorage.setItem('guiren_test_v1_events', JSON.stringify(log.slice(-200)));
+  }catch(err){}
+  if(DEBUG) console.log('[track]', e);
+}
+
+function loadProgress(){
+  try{
+    const a = JSON.parse(localStorage.getItem(K_ANS) || 'null');
+    const p = JSON.parse(localStorage.getItem(K_PRG) || 'null');
+    if(a && typeof a === 'object'){
+      state.answers = a;
+      state.cursor = (p && Number.isInteger(p.cursor)) ? Math.min(p.cursor, QUESTIONS.length-1) : 0;
+    }
+  }catch(err){ state = { answers:{}, cursor:0 }; }
+}
+function saveProgress(){
+  try{
+    localStorage.setItem(K_ANS, JSON.stringify(state.answers));
+    localStorage.setItem(K_PRG, JSON.stringify({ cursor:state.cursor, ts:Date.now() }));
+  }catch(err){}
+}
+function clearProgress(){
+  try{
+    localStorage.removeItem(K_ANS);
+    localStorage.removeItem(K_PRG);
+  }catch(err){}
+  state = { answers:{}, cursor:0 };
+}
+
+function answeredCount(){ return Object.keys(state.answers).filter(k=>state.answers[k]!=null).length; }
+function firstMissing(){
+  for(let i=0;i<QUESTIONS.length;i++){ if(state.answers[QUESTIONS[i].id] == null) return i; }
+  return -1;
+}
+
+function toast(msg){
+  TOAST.textContent = msg;
+  TOAST.classList.add('on');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(()=>TOAST.classList.remove('on'), 2000);
+}
+
+const ICON_CHECK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12.5 L9.5 18 L20 6.5"/></svg>`;
+const ICON_BACK  = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M15 4.5 L7.5 12 L15 19.5"/></svg>`;
+const ICON_SPARK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3.5 L13.8 9.2 L19.5 11 L13.8 12.8 L12 18.5 L10.2 12.8 L4.5 11 L10.2 9.2 Z"/></svg>`;
+
+/* =============================================================
+   3. 计分
+   ============================================================= */
+function mean(vals){ return vals.reduce((s,v)=>s+v,0) / vals.length; }
+
+function computeScores(ans){
+  const q = id => Number(ans[id]);
+  const A = (mean([q('Q1'), q('Q2')]) - 1) / 4 * 100;
+  const B = (mean([q('Q3'), q('Q4')]) - 1) / 4 * 100;
+  const C = (mean([q('Q6'), 6 - q('Q5')]) - 1) / 4 * 100;
+  const D = (mean([q('Q7'), q('Q8'), q('Q9'), q('Q10'), q('Q11')]) - 1) / 3 * 100;
+  const E = (mean([q('Q12'), q('Q13'), q('Q14'), q('Q15'), q('Q16')]) - 1) / 4 * 100;
+
+  const family = (q('Q12') - 1) / 4 * 100;
+  const friend = (mean([q('Q13'), q('Q14')]) - 1) / 4 * 100;
+  const so     = (mean([q('Q15'), q('Q16')]) - 1) / 4 * 100;
+
+  const total = 0.20*A + 0.20*B + 0.15*C + 0.25*D + 0.20*E;
+  const totalRounded = Math.round(total);
+
+  const stage = STAGES.find(s => totalRounded <= s.max) || STAGES[STAGES.length-1];
+
+  const rounded = { A:Math.round(A), B:Math.round(B), C:Math.round(C), D:Math.round(D), E:Math.round(E) };
+  const tag = resolveTag(rounded);
+
+  return {
+    raw:{ A, B, C, D, E, family, friend, so, total },
+    rounded,
+    total,
+    totalRounded,
+    stage,
+    tag
+  };
+}
+
+function resolveTag(r){
+  const trace = [];
+  const rules = [
+    { id:"warm",   name:"暖光型贵人磁铁",   cond:"A≥70 且 B≥65 且 D≥65 且 E≥60", ok: r.A>=70 && r.B>=65 && r.D>=65 && r.E>=60 },
+    { id:"deep",   name:"深根型信任贵人",   cond:"A≥70 且 B<60 且 D≥60 且 E≥55", ok: r.A>=70 && r.B<60 && r.D>=60 && r.E>=55 },
+    { id:"radar",  name:"广角型机会雷达",   cond:"B≥70 且 A≥55 且 (C<60 或 D<60)", ok: r.B>=70 && r.A>=55 && (r.C<60 || r.D<60) },
+    { id:"slow",   name:"慢热型长期贵人",   cond:"D≥65 且 B<60 且 E<60", ok: r.D>=65 && r.B<60 && r.E<60 },
+    { id:"clear",  name:"清醒独立型",       cond:"D<50 或 E<55", ok: r.D<50 || r.E<55 }
+  ];
+  for(const rule of rules){
+    trace.push({ name:rule.name, cond:rule.cond, hit:rule.ok });
+    if(rule.ok){ resolveTag.trace = trace; return rule.id; }
+  }
+  trace.push({ name:"稳健型关系经营者", cond:"以上均不命中", hit:true });
+  resolveTag.trace = trace;
+  return "steady";
+}
+
+/* =============================================================
+   4. 视图
+   ============================================================= */
+const HERO_IMG = "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/K8MDb364togRlpx7OgHc6YRKnhf";
+
+function viewCover(){
+  const done = answeredCount();
+  return `
+  <div class="view cover">
+    <div class="cover-art">
+      <img src="${HERO_IMG}" alt="浅色亚麻布上的柔和光影" width="2048" height="1152">
+    </div>
+    <div class="cover-body">
+      <p class="kicker">关系型贵人运</p>
+      <h1 class="cover-title">你容易在<br>哪种关系里遇到贵人？</h1>
+      <p class="cover-sub"><b>16 题</b> · 约 3 分钟 · 凭第一反应选</p>
+      <ul class="points">
+        <li><span class="ic">${ICON_CHECK}</span>测的不是命，是你让人愿意帮你的方式</li>
+        <li><span class="ic">${ICON_CHECK}</span>没有对错，选更接近真实反应的那一个</li>
+        <li><span class="ic">${ICON_CHECK}</span>结果包含：贵人运指数 + 人格标签 + 行动建议</li>
+      </ul>
+      <div class="cover-cta">
+        <button class="btn btn-primary" id="startBtn">开始测试</button>
+        ${done > 0 && done < QUESTIONS.length ? `<p class="resume-tip">上次已答 ${done} 题 · <button id="resumeBtn">继续上次作答</button></p>` : ``}
+      </div>
+      <p class="cover-foot">本测试用于自我探索，不构成心理诊断。</p>
+    </div>
+  </div>`;
+}
+
+function viewQuiz(){
+  const q = QUESTIONS[state.cursor];
+  const picked = state.answers[q.id];
+  const total = QUESTIONS.length;
+  const pct = Math.round(answeredCount() / total * 100);
+  const isLast = state.cursor === total - 1;
+
+  let opts;
+  if(q.type === 'likert'){
+    opts = LIKERT.map(o => `
+      <button class="opt${picked === o.v ? ' sel' : ''}" role="radio" aria-checked="${picked === o.v}" data-v="${o.v}" tabindex="0">
+        <span class="mark">${ICON_CHECK}</span><span>${o.t}</span>
+      </button>`).join('');
+  } else {
+    opts = q.opts.map((o, i) => `
+      <button class="scard${picked === i+1 ? ' sel' : ''}" role="radio" aria-checked="${picked === i+1}" data-v="${i+1}" aria-label="${o.k}：${o.t}" tabindex="0">
+        <span class="letter">${o.k}</span>
+        <span class="txt">${o.t}</span>
+        <span class="ok">${ICON_CHECK}</span>
+      </button>`).join('');
+  }
+
+  return `
+  <div class="view quiz">
+    <div class="quiz-head">
+      <button class="icon-btn" id="quitBtn">${ICON_BACK} 返回</button>
+      <div class="qcount"><b>${answeredCount()}</b> / ${total}</div>
+    </div>
+    <div class="pbar"><div class="fill" id="pfill" style="width:${pct}%"></div></div>
+
+    <div class="qbody">
+      <p class="qstem">${q.stem}</p>
+      <p class="qnote">${q.type === 'likert' ? '这句话和你的日常有多接近？' : '选最像你会做出的那一个反应'}</p>
+      <div class="opts" role="radiogroup" aria-label="${q.stem.replace(/"/g,'')}">${opts}</div>
+    </div>
+
+    <div class="qfoot">
+      <div class="qfoot-in">
+        <button class="btn btn-ghost" id="prevBtn" ${state.cursor === 0 ? 'disabled' : ''}>上一题</button>
+        <button class="btn btn-primary" id="nextBtn" ${picked == null ? 'disabled' : ''}>${isLast ? '查看我的贵人运报告' : '下一题'}</button>
+      </div>
+      <p class="hintline">答案只保存在你这台设备上</p>
+    </div>
+  </div>`;
+}
+
+function viewCalc(){
+  return `
+  <div class="view calc">
+    <div class="calc-ring" aria-hidden="true"></div>
+    <p class="calc-text">正在整理你的关系通路…</p>
+    <p class="calc-sub">16 题作答已记录</p>
+  </div>`;
+}
+
+function viewResult(){
+  const r = lastResult;
+  if(!r) return viewCover();
+  const tag = TAGS[r.tag];
+  const dims = DIMS.map(d => {
+    const val = r.rounded[d.key];
+    return `
+    <div class="dim">
+      <span class="lab">${d.name}</span>
+      <div class="track" role="progressbar" aria-valuenow="${val}" aria-valuemin="0" aria-valuemax="100" aria-label="${d.name}">
+        <div class="fill" data-v="${val}"></div>
+      </div>
+      <span class="num" data-count="${val}">0</span>
+    </div>`;
+  }).join('');
+
+  const subs = SUBS.map(s => {
+    const v = Math.round(r.raw[s.key]);
+    return `
+    <div class="sub">
+      <p class="n">${s.name}</p>
+      <p class="v" data-count="${v}">0</p>
+      <div class="bar"><i data-v="${v}"></i></div>
+    </div>`;
+  }).join('');
+
+  const refs = REFERENCES.map(x => `<cite>${x.t} doi:${x.doi}</cite>`).join('');
+
+  return `
+  <div class="view result">
+    <p class="res-kicker">你的关系型贵人运指数</p>
+    <div class="idx"><b id="idxNum" data-count="${r.totalRounded}">0</b><span>/ 100</span></div>
+    <p class="stage" id="stageLine">${r.stage.name}</p>
+    <div class="tag">${ICON_SPARK}<span>${tag.name}</span></div>
+    <p class="oneliner">${tag.one}</p>
+    <p class="stage-note">${r.stage.note}</p>
+
+    <section class="block">
+      <div class="block-h"><h2>五维分数</h2><span class="aside">满分 100</span></div>
+      <div class="dims" id="dimsBox">${dims}</div>
+    </section>
+
+    <section class="block">
+      <div class="block-h"><h2>你的支持更常来自哪一侧</h2></div>
+      <div class="subs" id="subsBox">${subs}</div>
+    </section>
+
+    <section class="block">
+      <div class="block-h"><h2>你的关系通路</h2></div>
+      <div class="reading">
+        ${tag.read.map((p,i)=>`<p class="${i===0?'lead':''}">${p}</p>`).join('')}
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="block-h"><h2>可执行的三步</h2></div>
+      <ol class="tips">
+        ${tag.tips.map((t,i)=>`<li><i>${i+1}</i><span>${t}</span></li>`).join('')}
+      </ol>
+    </section>
+
+    <div class="quote">
+      <span class="qmark">分享金句</span>
+      <p>${tag.quote}</p>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="cardBtn">生成我的贵人运卡片</button>
+      <button class="btn btn-ghost" id="copyBtn">复制分享文案</button>
+      <button class="btn btn-ghost" id="againBtn">再测一次</button>
+      <div class="confirm-bar" id="confirmBar">
+        <span class="msg">再测会清空现有答案，确定吗？</span>
+        <button id="confirmYes">确定重测</button>
+        <button id="confirmNo">先不了</button>
+      </div>
+    </div>
+
+    <details class="score-note">
+      <summary>计分说明与参考依据</summary>
+      <div class="note-body">
+        <p>总指数 = 0.20×亲和力 + 0.20×主动连接 + 0.15×情绪稳定 + 0.25×公共取向 + 0.20×支持感知。五个维度各自换算为百分制后加权，显示时取整。</p>
+        <p>情绪稳定中的第 5 题采用反向计分（6 − 原始分）。支持来源的家庭、朋友、重要他人小分只用于展示，不重复计入总分。</p>
+        <p>人格标签按五维分数取整后，从上到下依次匹配，命中即停。关系通路阶段由总指数区间决定，两者独立呈现。</p>
+        <div class="ref">
+          <span>参考依据</span>
+          ${refs}
+        </div>
+      </div>
+    </details>
+
+    <p class="disclaimer">本测试用于自我探索，不构成心理诊断。<br>答案仅保存在本机，不上传、不收集个人信息。</p>
+    ${DEBUG ? debugPanel() : ''}
+  </div>`;
+}
+
+/* 内部验证模式：?debug=1 时显示计分全链路 */
+function debugPanel(){
+  if(!lastResult) return '';
+  const a = state.answers;
+  const r = lastResult;
+  const raw = r.raw;
+  const q5 = Number(a.Q5);
+  const ans = QUESTIONS.map(q => `${q.id}=${a[q.id]}`).join(' ');
+  const means = [
+    `A 亲和力   均分 (Q1+Q2)/2 = ${((Number(a.Q1)+Number(a.Q2))/2).toFixed(4)}`,
+    `B 主动连接 均分 (Q3+Q4)/2 = ${((Number(a.Q3)+Number(a.Q4))/2).toFixed(4)}`,
+    `C 情绪稳定 均分 (Q6+(6-Q5))/2 = ${((Number(a.Q6)+(6-q5))/2).toFixed(4)}   [Q5 反向 ${q5}→${6-q5}]`,
+    `D 公共取向 均分 (Q7..Q11)/5 = ${((Number(a.Q7)+Number(a.Q8)+Number(a.Q9)+Number(a.Q10)+Number(a.Q11))/5).toFixed(4)}`,
+    `E 支持感知 均分 (Q12..Q16)/5 = ${((Number(a.Q12)+Number(a.Q13)+Number(a.Q14)+Number(a.Q15)+Number(a.Q16))/5).toFixed(4)}`
+  ].join('\n');
+  const pct = DIMS.map(d => `${d.key} ${d.name}: ${raw[d.key].toFixed(4)} → 取整 ${r.rounded[d.key]}`).join('\n');
+  const subs = SUBS.map(s => `${s.name}: ${raw[s.key].toFixed(4)} → ${Math.round(raw[s.key])}`).join('\n');
+  const weighted = `0.20×${raw.A.toFixed(4)} + 0.20×${raw.B.toFixed(4)} + 0.15×${raw.C.toFixed(4)} + 0.25×${raw.D.toFixed(4)} + 0.20×${raw.E.toFixed(4)}\n= ${raw.total.toFixed(4)} → 显示 ${r.totalRounded}`;
+  const trace = (resolveTag.trace || []).map(t => `${t.hit ? '✓ 命中' : '· 未命中'}  ${t.name}  〈${t.cond}〉`).join('\n');
+  return `
+  <div class="debug">
+    <h3>DEBUG · 计分全链路</h3>
+    <pre>原始答案
+${ans}
+
+维度均分
+${means}
+
+百分制
+${pct}
+
+支持来源小分
+${subs}
+
+加权总指数
+${weighted}
+
+关系通路阶段
+${r.stage.name}（取整指数 ${r.totalRounded}）
+
+人格标签命中轨迹
+${trace}
+
+最终结论
+标签：${TAGS[r.tag].name}
+阶段：${r.stage.name}</pre>
+    <div class="row">
+      <button id="dbgCase">载入 QA 算例</button>
+      <button id="dbgClear">清空缓存</button>
+    </div>
+  </div>`;
+}
+
+const QA_CASE = { Q1:4, Q2:5, Q3:3, Q4:4, Q5:2, Q6:4, Q7:3, Q8:2, Q9:4, Q10:3, Q11:4, Q12:4, Q13:3, Q14:4, Q15:5, Q16:4 };
+
+function viewAbout(){
+  return `
+  <div class="view about">
+    <p class="res-kicker">关于</p>
+    <h1 class="cover-title" style="margin-top:10px">一份关于关系通路的自我观察</h1>
+
+    <section class="block">
+      <div class="block-h"><h2>定位</h2></div>
+      <div class="reading">
+        <p>这个测试帮助不同性格的人识别：自己容易在哪种关系里遇到「拉你一把的人」，以及如何把那种关系里递过来的机会接住。它不做命理判断，也不作心理诊断。</p>
+        <p>「贵人」在这里是一个中性词——指那些在某个时刻用他们的位置、经验或标准，推了你一把的人。它可以很温和，也可以很不舒服。</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="block-h"><h2>三层模型</h2></div>
+      <div class="reading">
+        <p>人格引力：宜人性、外向性与情绪稳定，如何影响别人愿不愿意靠近你。</p>
+        <p>关系取向：你更偏向公共型关系（不计即时回报）还是交换型关系（讲求对等结算）。</p>
+        <p>支持感知：你在家庭、朋友与重要他人身上，实际感受到多少可用的支持。</p>
+      </div>
+      <div class="note-body" style="margin-top:14px">
+        <div class="ref">
+          <span>参考依据</span>
+          ${REFERENCES.map(x => `<cite>${x.t} doi:${x.doi}</cite>`).join('')}
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="block-h"><h2>隐私</h2></div>
+      <div class="reading">
+        <p>作答只保存在你这台设备的本地缓存里，用于刷新后继续作答。不收集姓名、手机号与地理位置，也不会上传到任何服务器。你可以在结果页的「再测一次」中清空。</p>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button class="btn btn-ghost" id="backHome">回到封面</button>
+    </div>
+    <p class="disclaimer">本测试用于自我探索，不构成心理诊断。</p>
+  </div>`;
+}
+
+function viewCard(){
+  return `
+  <div class="cardpage" id="cardPage">
+    <div class="cardpage-in">
+      <div class="card-holder" id="holder">
+        <canvas id="cardCanvas" width="1080" height="1440" aria-label="贵人运分享卡片"></canvas>
+        <div class="card-loading" id="cardLoading">正在生成卡片…</div>
+      </div>
+      <div class="card-btns">
+        <button class="btn btn-primary" id="saveCard">保存卡片到相册</button>
+        <div class="row2">
+          <button class="btn btn-ghost" id="copyCard">复制文案</button>
+          <button class="btn btn-ghost" id="backResult">返回结果</button>
+        </div>
+      </div>
+      <p class="card-hint">若未能自动保存，可长按上方图片保存</p>
+    </div>
+  </div>`;
+}
+
+/* =============================================================
+   5. 分享卡片（Canvas 1080×1440）
+   ============================================================= */
+function drawCard(){
+  const cv = document.getElementById('cardCanvas');
+  if(!cv || !lastResult) return;
+  const ctx = cv.getContext('2d');
+  const W = 1080, H = 1440;
+  const r = lastResult, tag = TAGS[r.tag];
+
+  const paper = '#FAF7F0', ink = '#1F2A24', muted = '#6B746E', faint = '#9AA29C', gold = '#C9A45C', line = '#E6E0D4';
+  const SERIF = '"Noto Serif SC","Songti SC",serif';
+  const SANS = '"PingFang SC","Noto Sans SC",sans-serif';
+  const cx = W / 2;
+
+  ctx.fillStyle = paper;
+  ctx.fillRect(0, 0, W, H);
+  ctx.strokeStyle = line;
+  ctx.lineWidth = 2;
+  ctx.strokeRect(48, 48, W - 96, H - 96);
+
+  // 居中文本，支持字距
+  function draw(str, y, font, color, tracking){
+    ctx.font = font;
+    ctx.fillStyle = color;
+    ctx.textBaseline = 'alphabetic';
+    if(!tracking){
+      ctx.textAlign = 'center';
+      ctx.fillText(str, cx, y);
+      return;
+    }
+    ctx.textAlign = 'left';
+    const chars = [...str];
+    const widths = chars.map(c => ctx.measureText(c).width);
+    const total = widths.reduce((a,b)=>a+b,0) + tracking * Math.max(0, chars.length - 1);
+    let x = cx - total / 2;
+    ctx.textAlign = 'left';
+    chars.forEach((c, i) => {
+      ctx.fillText(c, x, y);
+      x += widths[i] + tracking;
+    });
+  }
+
+  // 自动换行居中
+  function wrap(str, y, font, color, maxWidth, lh){
+    ctx.font = font;
+    ctx.fillStyle = color;
+    ctx.textAlign = 'center';
+    let line = '';
+    const lines = [];
+    for(const ch of [...str]){
+      const test = line + ch;
+      if(ctx.measureText(test).width > maxWidth && line){ lines.push(line); line = ch; }
+      else { line = test; }
+    }
+    if(line) lines.push(line);
+    lines.forEach((l, i) => ctx.fillText(l, cx, y + i * lh));
+    return lines.length;
+  }
+
+  /* 顶部小字 */
+  draw('我的关系型贵人运报告', 168, '26px ' + SANS, faint, 7);
+
+  /* 人格标签 */
+  draw(tag.name, 322, '600 56px ' + SERIF, ink, 3);
+
+  /* 金色短线 */
+  ctx.strokeStyle = gold;
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(cx - 56, 372);
+  ctx.lineTo(cx + 56, 372);
+  ctx.stroke();
+
+  /* 指数 */
+  const numStr = String(r.totalRounded);
+  ctx.font = '600 150px ' + SERIF;
+  const numW = ctx.measureText(numStr).width;
+  ctx.font = '28px ' + SANS;
+  const suffixW = ctx.measureText(' / 100').width;
+  const totalW = numW + suffixW;
+  ctx.textAlign = 'left';
+  ctx.fillStyle = ink;
+  ctx.font = '600 150px ' + SERIF;
+  ctx.fillText(numStr, cx - totalW / 2, 566);
+  ctx.font = '28px ' + SANS;
+  ctx.fillStyle = faint;
+  ctx.fillText(' / 100', cx - totalW / 2 + numW, 562);
+
+  /* 阶段 */
+  draw(r.stage.name, 636, '30px ' + SANS, muted, 4);
+
+  /* 细线 */
+  ctx.strokeStyle = line;
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(120, 704);
+  ctx.lineTo(W - 120, 704);
+  ctx.stroke();
+
+  /* 前三高维度 */
+  const top3 = DIMS.map(d => ({ name:d.name, v:r.rounded[d.key] }))
+                   .sort((a,b)=>b.v-a.v).slice(0,3);
+  const barX = 392, barW = 468;
+  let y = 780;
+  top3.forEach(d => {
+    ctx.textAlign = 'left';
+    ctx.font = '28px ' + SANS;
+    ctx.fillStyle = muted;
+    ctx.fillText(d.name, 150, y);
+
+    ctx.fillStyle = '#EDE7DB';
+    ctx.fillRect(barX, y - 15, barW, 8);
+    const grad = ctx.createLinearGradient(barX, 0, barX + barW, 0);
+    grad.addColorStop(0, '#6F8A7B');
+    grad.addColorStop(1, gold);
+    ctx.fillStyle = grad;
+    ctx.fillRect(barX, y - 15, barW * (d.v / 100), 8);
+
+    ctx.textAlign = 'right';
+    ctx.font = '26px ' + SANS;
+    ctx.fillStyle = ink;
+    ctx.fillText(String(d.v), W - 150, y);
+    y += 64;
+  });
+
+  /* 金句 */
+  ctx.fillStyle = gold;
+  ctx.font = '20px ' + SERIF;
+  ctx.textAlign = 'center';
+  ctx.fillText('◆', cx, 1024);
+
+  wrap(tag.quote, 1102, '500 44px ' + SERIF, ink, 780, 66);
+
+  /* 卡片短句 */
+  draw(tag.card, 1248, '500 28px ' + SERIF, muted, 3);
+
+  /* 底部 */
+  draw('16 题 · 关系型贵人运测试', 1344, '22px ' + SANS, faint, 3);
+
+  const loading = document.getElementById('cardLoading');
+  if(loading) loading.style.display = 'none';
+}
+
+function cardReady(){
+  return document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+}
+
+function saveCard(){
+  const cv = document.getElementById('cardCanvas');
+  if(!cv) return;
+  try{
+    cv.toBlob(blob => {
+      if(!blob){ toast('生成失败，请长按图片保存'); return; }
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `关系型贵人运-${lastResult.totalRounded}-${TAGS[lastResult.tag].name}.png`;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 1500);
+      toast('已保存，若未自动保存请长按图片');
+      track('save_card');
+    }, 'image/png');
+  }catch(err){
+    toast('生成失败，请长按图片保存');
+  }
+}
+
+function shareText(){
+  const r = lastResult, tag = TAGS[r.tag];
+  return `我的关系型贵人运指数 ${r.totalRounded}，人格标签是「${tag.name}」。\n${tag.quote}\n你也来测测：你容易在哪种关系里遇到贵人？`;
+}
+
+function copyText(text, okMsg){
+  const done = () => toast(okMsg || '已复制');
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+  } else {
+    fallbackCopy(text, done);
+  }
+}
+function fallbackCopy(text, done){
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.setAttribute('readonly','');
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.select();
+  try{ document.execCommand('copy'); done(); }catch(err){ toast('复制失败，请手动摘录'); }
+  ta.remove();
+}
+
+/* =============================================================
+   6. 路由与交互
+   ============================================================= */
+let calcTimer = null;
+
+function go(hash){ location.hash = hash; }
+
+function render(){
+  const route = (location.hash.replace('#','') || '/cover');
+
+  if(route === '/calc'){
+    APP.innerHTML = viewCalc();
+    clearTimeout(calcTimer);
+    calcTimer = setTimeout(() => { go('/result'); }, 700);
+    return;
+  }
+
+  if(route === '/quiz'){
+    const miss = firstMissing();
+    APP.innerHTML = viewQuiz();
+    bindQuiz();
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  if(route === '/result'){
+    if(firstMissing() >= 0){
+      state.cursor = Math.max(0, firstMissing());
+      APP.innerHTML = viewQuiz();
+      bindQuiz();
+      toast('还有题目没作答，选一个更接近你的');
+      return;
+    }
+    if(!lastResult){ lastResult = computeScores(state.answers); }
+    APP.innerHTML = viewResult();
+    bindResult();
+    animateResult();
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  if(route === '/card'){
+    if(!lastResult){ go('/cover'); return; }
+    APP.innerHTML = viewCard();
+    bindCard();
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  if(route === '/about'){
+    APP.innerHTML = viewAbout();
+    const back = document.getElementById('backHome');
+    if(back) back.addEventListener('click', () => go('/cover'));
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  APP.innerHTML = viewCover();
+  bindCover();
+  window.scrollTo(0, 0);
+}
+
+function bindCover(){
+  const start = document.getElementById('startBtn');
+  if(start) start.addEventListener('click', () => {
+    track('start');
+    state.cursor = firstMissing() >= 0 ? firstMissing() : 0;
+    go('/quiz');
+  });
+  const resume = document.getElementById('resumeBtn');
+  if(resume) resume.addEventListener('click', () => go('/quiz'));
+}
+
+function bindQuiz(){
+  const q = QUESTIONS[state.cursor];
+
+  document.querySelectorAll('.opt, .scard').forEach(el => {
+    el.addEventListener('click', () => choose(Number(el.dataset.v)));
+  });
+  document.querySelectorAll('.opt, .scard').forEach(el => {
+    el.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); choose(Number(el.dataset.v)); }
+    });
+  });
+
+  const prev = document.getElementById('prevBtn');
+  if(prev) prev.addEventListener('click', () => {
+    if(state.cursor === 0) return;
+    state.cursor--; saveProgress(); track('prev'); render();
+  });
+  const next = document.getElementById('nextBtn');
+  if(next) next.addEventListener('click', () => {
+    if(state.answers[q.id] == null){ toast('先选一个更接近你的'); return; }
+    advance();
+  });
+  const quit = document.getElementById('quitBtn');
+  if(quit) quit.addEventListener('click', () => go('/cover'));
+}
+
+function choose(v){
+  const q = QUESTIONS[state.cursor];
+  const isNew = state.answers[q.id] == null || state.answers[q.id] !== v;
+  state.answers[q.id] = v;
+  saveProgress();
+  track('answer', { id:q.id, v, changed:!isNew });
+
+  document.querySelectorAll('.opt, .scard').forEach(el => {
+    const on = Number(el.dataset.v) === v;
+    el.classList.toggle('sel', on);
+    el.setAttribute('aria-checked', on ? 'true' : 'false');
+  });
+  const fill = document.getElementById('pfill');
+  if(fill) fill.style.width = Math.round(answeredCount() / QUESTIONS.length * 100) + '%';
+  const next = document.getElementById('nextBtn');
+  if(next) next.disabled = false;
+  const count = document.querySelector('.qcount b');
+  if(count) count.textContent = answeredCount();
+
+  const isLast = state.cursor === QUESTIONS.length - 1;
+  if(!isLast){ setTimeout(advance, 300); }
+}
+
+let advancing = false;
+function advance(){
+  if(advancing) return;
+  if(state.cursor < QUESTIONS.length - 1){
+    advancing = true;
+    state.cursor++;
+    saveProgress();
+    render();
+    setTimeout(()=>{ advancing = false; }, 60);
+  } else {
+    submit();
+  }
+}
+
+function submit(){
+  if(submitting) return;
+  const miss = firstMissing();
+  if(miss >= 0){
+    state.cursor = miss;
+    render();
+    toast('还有题目没作答，选一个更接近你的');
+    return;
+  }
+  submitting = true;
+  try{
+    lastResult = computeScores(state.answers);
+    track('complete', { total:lastResult.totalRounded, tag:lastResult.tag });
+    go('/calc');
+  }catch(err){
+    submitting = false;
+    toast('生成结果时出错，请再试一次');
+    go('/quiz');
+    return;
+  }
+  setTimeout(()=>{ submitting = false; }, 900);
+}
+
+function bindResult(){
+  const card = document.getElementById('cardBtn');
+  if(card) card.addEventListener('click', () => go('/card'));
+  const copy = document.getElementById('copyBtn');
+  if(copy) copy.addEventListener('click', () => { copyText(shareText()); track('copy_text'); });
+  const again = document.getElementById('againBtn');
+  const bar = document.getElementById('confirmBar');
+  if(again && bar){
+    again.addEventListener('click', () => {
+      bar.classList.add('on');
+      again.textContent = '再测一次？';
+    });
+  }
+  const yes = document.getElementById('confirmYes');
+  if(yes) yes.addEventListener('click', () => {
+    clearProgress();
+    lastResult = null;
+    track('retest');
+    go('/quiz');
+  });
+  const no = document.getElementById('confirmNo');
+  if(no) no.addEventListener('click', () => {
+    bar.classList.remove('on');
+    if(again) again.textContent = '再测一次';
+  });
+  const summary = document.querySelector('details.score-note summary');
+  if(summary) summary.addEventListener('click', () => track('open_score_note'));
+
+  const dbgCase = document.getElementById('dbgCase');
+  if(dbgCase) dbgCase.addEventListener('click', () => {
+    state.answers = Object.assign({}, QA_CASE);
+    saveProgress();
+    lastResult = computeScores(state.answers);
+    render();
+    toast('已载入验证算例');
+  });
+  const dbgClear = document.getElementById('dbgClear');
+  if(dbgClear) dbgClear.addEventListener('click', () => {
+    clearProgress();
+    lastResult = null;
+    go('/cover');
+  });
+}
+
+function animateResult(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function countUp(el, target, dur){
+    if(reduce){ el.textContent = target; return; }
+    const t0 = performance.now();
+    const step = now => {
+      const p = Math.min(1, (now - t0) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased);
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    };
+    requestAnimationFrame(step);
+  }
+
+  const idx = document.getElementById('idxNum');
+  if(idx) countUp(idx, Number(idx.dataset.count), 800);
+
+  const runBars = (box, fills, nums) => {
+    fills.forEach(el => { el.style.width = el.dataset.v + '%'; });
+    nums.forEach(el => countUp(el, Number(el.dataset.count), 800));
+  };
+
+  const dimsBox = document.getElementById('dimsBox');
+  const subsBox = document.getElementById('subsBox');
+  const fire = (box) => {
+    if(!box) return;
+    runBars(box, box.querySelectorAll('.fill, .bar i'), box.querySelectorAll('.num, .sub .v'));
+  };
+
+  if(reduce){
+    fire(dimsBox); fire(subsBox);
+    return;
+  }
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if(en.isIntersecting){
+          fire(en.target);
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold:0.25 });
+    if(dimsBox) io.observe(dimsBox);
+    if(subsBox) io.observe(subsBox);
+  } else {
+    fire(dimsBox); fire(subsBox);
+  }
+}
+
+function bindCard(){
+  cardReady().then(() => {
+    requestAnimationFrame(() => {
+      drawCard();
+      track('gen_card');
+    });
+  }).catch(() => {
+    drawCard();
+  });
+
+  const save = document.getElementById('saveCard');
+  if(save) save.addEventListener('click', saveCard);
+  const copy = document.getElementById('copyCard');
+  if(copy) copy.addEventListener('click', () => { copyText(shareText()); track('copy_card'); });
+  const back = document.getElementById('backResult');
+  if(back) back.addEventListener('click', () => go('/result'));
+}
+
+window.addEventListener('hashchange', () => {
+  const r = location.hash.replace('#','');
+  if(r !== '/calc') clearTimeout(calcTimer);
+  render();
+});
+loadProgress();
+render();
+</script>
+</body>
+</html>
